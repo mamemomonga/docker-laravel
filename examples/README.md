@@ -8,4 +8,4 @@
 	$ docker-compose exec -u www-data laravel composer install
 	$ docker-compose exec -u www-data laravel php artisan migrate
 
-	$ ZZdocker-compose down --volume
+	$ docker-compose down --volume
