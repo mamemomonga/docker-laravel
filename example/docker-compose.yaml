@@ -15,7 +15,7 @@ services:
       - laravel
 
   laravel:
-    image: mamemomonga/laravel:v7.0
+    image: mamemomonga/laravel:7.0
     # www-data:www-data
     user: "33:33"
     volumes:

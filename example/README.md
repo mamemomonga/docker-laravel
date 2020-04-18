@@ -1,6 +1,6 @@
 # Example
 
-	$ docker run --rm mamemomonga/laravel:v7.0 tar cC / app | tar xv
+	$ docker run --rm mamemomonga/laravel:7.0 tar cC / app | tar xv
 	$ bin/configure.sh
 	$ docker-compose up -d
 
