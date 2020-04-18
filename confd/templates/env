@@ -1,0 +1,44 @@
+APP_NAME={{ getv "/laravel/name" }}
+APP_ENV={{ getv "/laravel/env" }}
+APP_DEBUG={{ getv "/laravel/debug" }}
+APP_URL={{ getv "/laravel/url" }}
+APP_KEY={{ getv "/laravel/key" }}
+
+LOG_CHANNEL=stderr
+
+DB_CONNECTION=mysql
+DB_HOST={{ getv "/db/host" }}
+DB_PORT={{ getv "/db/port" }}
+DB_DATABASE={{ getv "/db/database" }}
+DB_USERNAME={{ getv "/db/username" }}
+DB_PASSWORD={{ getv "/db/password" }}
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+
+REDIS_HOST={{ getv "/redis/host" }}
+REDIS_PASSWORD={{ getv "/redis/password" }}
+REDIS_PORT={{ getv "/redis/port" }}
+
+MAIL_DRIVER=smtp
+MAIL_HOST={{ getv "/smtp/host" }}
+MAIL_PORT={{ getv "/smtp/port" }}
+MAIL_USERNAME={{ getv "/smtp/username" }}
+MAIL_PASSWORD={{ getv "/smtp/password" }}
+MAIL_ENCRYPTION={{ getv "/smtp/encryption" }}
+
+AWS_ACCESS_KEY_ID={{ getv "/aws/access_key_id" }}
+AWS_SECRET_ACCESS_KEY={{ getv "/aws/secret_access_key" }}
+AWS_DEFAULT_REGION={{ getv "/aws/default_region" }}
+AWS_BUCKET={{ getv "/aws/bucket" }}
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=mt1
+
+MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"

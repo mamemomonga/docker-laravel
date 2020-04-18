@@ -1,0 +1,32 @@
+laravel:
+  name: app
+  url: http://localhost/
+  debug: true
+  env: prod
+  key:
+
+db:
+  host: mysql
+  port: 3306
+  database: app
+  username: app
+  password: FIXME
+
+aws:
+  access_key_id: AKIAAAAAAAAAAAAAAAAA
+  secret_access_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  default_region: ap-northeast-1
+  bucket: FIXME
+
+redis:
+  host: 127.0.0.1
+  password: FIXME
+  port: 6379
+
+smtp:
+  host: dummymail
+  port: 10025
+  username: ""
+  password: ""
+  encryption: ""
+
