@@ -30,7 +30,8 @@ RUN set -xe && \
 	mkdir -p /app && \
 	chown www-data:www-data /app && \
 	mkdir -p /var/composer && \
-	chown www-data:www-data /var/composer
+	chown www-data:www-data /var/composer && \
+	chown www-data:www-data /var/www
 
 USER www-data
 RUN set -xe && \
