@@ -38,8 +38,17 @@ RUN set -xe && \
 	composer create-project --prefer-dist "laravel/laravel=7.0.*" .
 USER root
 
+RUN set -xe && \
+	curl -Lo /tmp/node.tar.xz https://nodejs.org/dist/v12.16.2/node-v12.16.2-linux-x64.tar.xz && \
+	curl -Lo /tmp/yarn.tar.gz https://yarnpkg.com/latest.tar.gz && \
+	tar Jx --strip-components 1 -f /tmp/node.tar.xz -C /usr/local && \
+	tar zx --strip-components 1 -f /tmp/yarn.tar.gz -C /usr/local && \
+	rm /tmp/node.tar.xz && \
+	rm /tmp/yarn.tar.gz
+
 ADD confd /etc/confd
 ADD entrypoint.sh /entrypoint.sh
+
 WORKDIR "/app"
 ENTRYPOINT ["/entrypoint.sh"]
 
