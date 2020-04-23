@@ -16,8 +16,6 @@ services:
 
   laravel:
     image: mamemomonga/laravel:7.0
-    # www-data:www-data
-    user: "33:33"
     volumes:
       - ./app:/app
       - ./confd.yaml:/confd.yaml:ro

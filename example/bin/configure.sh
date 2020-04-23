@@ -2,7 +2,7 @@
 set -eu
 
 BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
-IMAGE_LARAVEL="mamemomonga/laravel:v7.0"
+IMAGE_LARAVEL="mamemomonga/laravel:7.0"
 
 rand_chars() {
 	openssl rand -base64 64 | perl -E 'local $/; $_=<>; s#\n#_#g;s#/#.#g;s#/#!#g; for my $c(1..'$1') { print substr($_,$c,1_) }; say ""'
